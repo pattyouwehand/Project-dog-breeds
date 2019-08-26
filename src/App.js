@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import Gif from './Gif'
 import Doglist from './doglist'
-// import { Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import DogImages from './dogimages'
 
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
        <br />
       </header>
       <main>
-      <Doglist />
-      {/* <Route exact path="/" component={Doglist} /> */}
+      {/* <Doglist /> */}
+      <Route exact path="/" component={Doglist} />
+      <Route path="/dog-breeds/:breed" component={DogImages } />
       </main>
     </div>
   );
