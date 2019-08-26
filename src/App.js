@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Gif from './Gif'
 import Doglist from './doglist'
-import { Route } from 'react-router-dom'
+// import { Route } from 'react-router-dom'
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       </header>
       <main>
       <Doglist />
-      <Route exact path="/" component={Doglist} />
+      {/* <Route exact path="/" component={Doglist} /> */}
       </main>
     </div>
   );

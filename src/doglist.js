@@ -14,7 +14,7 @@ export default class Doglist extends Component {
       .then(response => {
         const doglist = Object.keys(response.body.message)
         this.updateBreed(doglist)
-        console.log(doglist)
+        // console.log(doglist)
       })
       .catch(console.error)
       // const doglist = response.body.message
