@@ -3,7 +3,8 @@ import './App.css';
 import Gif from './Gif'
 import Doglist from './doglist'
 import { Route } from 'react-router-dom'
-import DogImages from './dogimages'
+// import DogImages from './dogimages'
+import DogImagesContainer from './DogImagesContainer'
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
       <main>
       {/* <Doglist /> */}
       <Route exact path="/" component={Doglist} />
-      <Route path="/dog-breeds/:breed" component={DogImages } />
+      {/* <Route path="/dog-breeds/:breed" component={DogImages } /> */}
+      <Route path="/dog-breeds/:breed" component={DogImagesContainer} />
       </main>
     </div>
   );
