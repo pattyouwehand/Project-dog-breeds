@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import Gif from './Gif'
 import Doglist from './doglist'
+import { Route } from 'react-router-dom'
+
 
 function App() {
   return (
@@ -13,8 +15,11 @@ function App() {
        <br />
        <Gif />
        <br />
-       <Doglist />
       </header>
+      <main>
+      <Doglist />
+      <Route exact path="/" component={Doglist} />
+      </main>
     </div>
   );
 };
