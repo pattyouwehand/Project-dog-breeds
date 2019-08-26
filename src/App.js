@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Gif from './Gif'
+import Doglist from './doglist'
 
 function App() {
   return (
@@ -11,9 +12,11 @@ function App() {
        <p> Under Construction </p>
        <br />
        <Gif />
+       <br />
+       <Doglist />
       </header>
     </div>
   );
-}
+};
 
 export default App;
