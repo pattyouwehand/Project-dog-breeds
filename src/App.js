@@ -21,6 +21,7 @@ function App() {
       </header>
       <main>
       {/* <Doglist /> */}
+      <Link className="home" to="/"> <b> Home </b> <br/> </Link>
       <Link className="dog-list-link" to="/dog-list"><br/><b>Dog List</b><br/><br/></Link>
       <Route path="/dog-list" component={Doglist} />
       {/* <Route path="/dog-breeds/:breed" component={DogImages } /> */}
