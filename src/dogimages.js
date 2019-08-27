@@ -5,7 +5,7 @@ export default function DogImages (props) {
 
   const { images, breed } = props;
 
-  console.log("im", images)
+  console.log("Dogimages Component", images)
 
   return (
     <div className="dog-breed-images">

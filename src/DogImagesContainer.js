@@ -30,7 +30,7 @@ class DogImagesContainer extends Component {
 
   render() {
     console.log("RENDERING", this.props.images)
-    return <DogImages images={this.props.images} />
+    return <main><DogImages className="dog-breed-images" images={this.props.images} /></main>
   }
 }
 

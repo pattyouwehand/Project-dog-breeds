@@ -29,6 +29,12 @@ function App() {
       </main>
       <aside>
       </aside>
+      <footer>
+      <br />
+      <br />
+      <br />
+      <p>Made with ❤ at Codaisseur by Lucas and Patty</p>
+      </footer>
     </div>
   );
 };

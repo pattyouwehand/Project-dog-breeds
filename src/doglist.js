@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import request from 'superagent'
 import List from './list'
 
@@ -17,12 +17,12 @@ export default class Doglist extends Component {
         // console.log(doglist)
       })
       .catch(console.error)
-      // const doglist = response.body.message
-  } 
+    // const doglist = response.body.message
+  }
 
   updateBreed(doglist) {
     this.setState({
-      dogBreed : doglist
+      dogBreed: doglist
     })
   }
 
@@ -30,8 +30,10 @@ export default class Doglist extends Component {
   render() {
     return (
       <div className="doglist">
-      {/* { this.state.dogBreed === null && 'Loading...' } */}
-      <List dogBreed={this.state.dogBreed} />
+        <main>
+          {/* { this.state.dogBreed === null && 'Loading...' } */}
+          <List dogBreed={this.state.dogBreed} />
+        </main>
       </div>
     )
   }
