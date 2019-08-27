@@ -1,6 +1,6 @@
 const reducer = (state = [], action = {}) => {
   switch (action.type) {
-  case 'NEW_IMAGES':
+  case 'STORE_IMAGES':
     return action.payload
   default:
     return state

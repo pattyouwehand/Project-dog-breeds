@@ -7,12 +7,13 @@ class DogImagesContainer extends Component {
   state = { images: null }
 
   componentDidMount() {
+
     const breed = this.props.match.params.breed
     request
       .get(`https://dog.ceo/api/breed/${encodeURIComponent(breed)}/images`)
       .then(response => {
+        console.log("RESPONSE", response.body.message)
         this.updateImages(response.body.message)
-        console.log(response.body.message)
       })
       .catch(console.error)
   }
@@ -21,6 +22,7 @@ class DogImagesContainer extends Component {
     console.log("IMAGES", images.length)
     const newImages = images.slice(0, 10)
     console.log("NEW IMAGES", newImages)
+  //  this.props.storeImages(newImages);
     this.setState({
       images: newImages
     })
@@ -33,15 +35,15 @@ class DogImagesContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    images: state
+    images: state.newImages
   }
 }
 
-// newImages = (url) => {
-//   this.props.dispatch({
-//     type: 'NEW_IMAGES',
-//     payload: url
-//   })
-// }
+const storeImages = (newImages) => {
+  console.log("kelley")
+  this.props.dispatch({type: 'STORE_IMAGES' , payload: this.state.newImages})
+}
 
-export default connect(mapStateToProps)(DogImagesContainer)
+const mapDispatchToProps = { storeImages }
+
+export default connect(mapStateToProps, mapDispatchToProps)(DogImagesContainer)

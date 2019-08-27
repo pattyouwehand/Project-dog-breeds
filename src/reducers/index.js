@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux'
-import images from './images'
-import newImages from './newImages'
+import StoreImages from './StoreImages'
 
 export default combineReducers({
-  images,
-  newImages
+  StoreImages
 })
