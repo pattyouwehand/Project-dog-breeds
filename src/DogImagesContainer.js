@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import DogImages from './dogimages'
 import request from 'superagent'
+import { connect } from 'react-redux'
 
-export default class DogImagesContainer extends Component {
+class DogImagesContainer extends Component {
   state = { images: null }
 
   componentDidMount() {
@@ -29,3 +30,18 @@ export default class DogImagesContainer extends Component {
     return <DogImages images={this.state.images} />
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    images: state
+  }
+}
+
+// newImages = (url) => {
+//   this.props.dispatch({
+//     type: 'NEW_IMAGES',
+//     payload: url
+//   })
+// }
+
+export default connect(mapStateToProps)(DogImagesContainer)
