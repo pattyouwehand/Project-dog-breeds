@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import StoreImages from './StoreImages'
+import dogimages from './dogimages'
 
 export default combineReducers({
-  StoreImages
+  dogimages
 })

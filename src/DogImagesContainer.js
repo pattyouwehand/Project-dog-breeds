@@ -29,7 +29,8 @@ class DogImagesContainer extends Component {
   }
 
   render() {
-    return <DogImages images={this.state.images} />
+    console.log("RENDERING", this.props.images)
+    return <DogImages images={this.props.images} />
   }
 }
 
@@ -37,7 +38,7 @@ const mapStateToProps = (state) => {
   console.log("mapStateToProps")
   console.log("mapStateToProps2", state)
   return {
-    images: state
+    images: state.dogimages
   }
 }
 

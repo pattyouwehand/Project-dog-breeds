@@ -28,7 +28,6 @@ function App() {
       <Route path="/dog-breeds/:breed" component={DogImagesContainer} />
       </main>
       <aside>
-        
       </aside>
     </div>
   );

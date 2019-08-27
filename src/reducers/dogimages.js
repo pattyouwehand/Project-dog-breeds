@@ -1,4 +1,4 @@
-const reducer = (state = [], action = {}) => {
+const reducer = (state = [], action) => {
   console.log("func test", action)
   switch (action.type) {
   case 'STORE_IMAGES': {
@@ -11,3 +11,8 @@ const reducer = (state = [], action = {}) => {
 }
 
 export default reducer
+
+// [
+//   ...state,
+//   { ...action.payload }
+// ]
