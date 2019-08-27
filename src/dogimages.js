@@ -9,7 +9,7 @@ export default function DogImages (props) {
     <div className="dog-breed-images">
       <h1>Dogs Breed Images and Details</h1>
 
-      This page will show 10 images of the <b>{ breed }</b> breed.
+      This page will show up to 10 images of the <b>{ breed }</b> breed.
 
       <Link to="/"><br />< br/>Go back to the index</Link>
 
