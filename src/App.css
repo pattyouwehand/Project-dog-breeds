@@ -26,3 +26,9 @@
 ul {
   list-style-type: none;
 }
+
+.link-button {
+display: inline;
+font-weight: bold;
+padding: 1rem;
+}
