@@ -26,6 +26,9 @@ function App() {
       <Route path="/dog-list" component={Doglist} />
       {/* <Route path="/dog-breeds/:breed" component={DogImages } /> */}
       <Route path="/dog-breeds/:breed" component={DogImagesContainer} />
+      <br />
+      <br />
+      <h4> Enjoy the app. You can start by checking our breed list. Click in 'Dog List' for more information. </h4>
       </main>
       <aside>
       </aside>

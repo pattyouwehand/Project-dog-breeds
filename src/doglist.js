@@ -31,6 +31,8 @@ export default class Doglist extends Component {
     return (
       <div className="doglist">
         <main>
+          < br />
+        Click on the name of a breed for more info:
           {/* { this.state.dogBreed === null && 'Loading...' } */}
           <List dogBreed={this.state.dogBreed} />
         </main>
