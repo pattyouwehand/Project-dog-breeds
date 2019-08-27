@@ -5,6 +5,7 @@ import Doglist from './doglist'
 import { Route } from 'react-router-dom'
 // import DogImages from './dogimages'
 import DogImagesContainer from './DogImagesContainer'
+import GameOne from './components/GameOne'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route exact path="/" component={Doglist} />
       {/* <Route path="/dog-breeds/:breed" component={DogImages } /> */}
       <Route path="/dog-breeds/:breed" component={DogImagesContainer} />
+      <Route path="/game-one" component={GameOne} />
       </main>
     </div>
   );

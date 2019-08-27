@@ -1,11 +1,12 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import Question from './Question'
 
 export default function GameOne (props) {
 
   return(
     <div>
-      <Questions />
+      <h1>Which dog breed is this?</h1>
+      <Question content={}/>
     </div>
   )
 
