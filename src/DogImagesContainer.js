@@ -19,13 +19,13 @@ class DogImagesContainer extends Component {
   }
 
   updateImages(images) {
-    console.log("IMAGES", images.length)
+    console.log("TOTAL IMAGES", images.length)
     const newImages = images.slice(0, 10)
     console.log("NEW IMAGES", newImages)
-  //  this.props.storeImages(newImages);
-    this.setState({
-      images: newImages
-    })
+     this.props.storeImages(newImages);
+    // this.setState({
+    //   images: newImages
+    // })
   }
 
   render() {
@@ -34,14 +34,16 @@ class DogImagesContainer extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log("mapStateToProps")
+  console.log("mapStateToProps2", state)
   return {
-    images: state.newImages
+    images: state
   }
 }
 
 const storeImages = (newImages) => {
-  console.log("kelley")
-  this.props.dispatch({type: 'STORE_IMAGES' , payload: this.state.newImages})
+  console.log("storeImages", newImages)
+  return { type: 'STORE_IMAGES', payload: newImages }
 }
 
 const mapDispatchToProps = { storeImages }
