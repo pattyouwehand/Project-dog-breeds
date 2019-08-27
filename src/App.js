@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Gif from './Gif'
 import Doglist from './doglist'
-import { Route } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 // import DogImages from './dogimages'
 import DogImagesContainer from './DogImagesContainer'
 
@@ -20,10 +20,14 @@ function App() {
       </header>
       <main>
       {/* <Doglist /> */}
+      <Link className="dog-list-link" to="/dog-list"><br/><b>Dog List</b><br/><br/></Link>
       <Route path="/dog-list" component={Doglist} />
       {/* <Route path="/dog-breeds/:breed" component={DogImages } /> */}
       <Route path="/dog-breeds/:breed" component={DogImagesContainer} />
       </main>
+      <aside>
+        
+      </aside>
     </div>
   );
 };
