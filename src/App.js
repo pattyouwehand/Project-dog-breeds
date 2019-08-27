@@ -13,7 +13,8 @@ function App() {
       <header className="App-header">
        <title> Dog-Breeds App </title>
        <h1> Dog Breeds App </h1>
-       <p> Under Construction </p>
+       <p> Under Construction... </p>
+       <p> Check our dog list with pictures! </p>
        <br />
        <Gif />
        <br />
