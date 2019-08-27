@@ -20,7 +20,7 @@ function App() {
       </header>
       <main>
       {/* <Doglist /> */}
-      <Route exact path="/" component={Doglist} />
+      <Route path="/dog-list" component={Doglist} />
       {/* <Route path="/dog-breeds/:breed" component={DogImages } /> */}
       <Route path="/dog-breeds/:breed" component={DogImagesContainer} />
       </main>
