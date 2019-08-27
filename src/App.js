@@ -20,6 +20,8 @@ function App() {
        <br />
       </header>
       <main>
+        <button id="startGameOne">START GAME</button>
+
       {/* <Doglist /> */}
       <Route exact path="/" component={Doglist} />
       {/* <Route path="/dog-breeds/:breed" component={DogImages } /> */}
