@@ -14,7 +14,7 @@ export default function DogImages (props) {
       This page will show up to 10 images of the <b>{ breed }</b> breed.
       <div>
         <br />
-        {images && images.map(url => <img key={url} src={url} alt="Dog" />)}
+        {images && images.map(url => <img className="dog-breed-images" key={url} src={url} alt="Dog" />)}
         {!images && 'Loading...'}
       </div>
       <br />
