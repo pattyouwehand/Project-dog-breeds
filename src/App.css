@@ -23,11 +23,34 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul {
+  list-style-type: none;
+}
+
+.link-button {
+display: inline;
+font-weight: bold;
+padding: 1rem;
+}
+
+.dog-breed-images {
+  max-width: 450px;
+  max-height: 600px;
+  text-align: center;
+  margin: auto;
+}
+
+.doglist {
+  font-size: 20px;
+}
+
+.link-button {
+  font-size: 28px;
+  padding: 2rem;
+  text-decoration: none;
+}
+
+footer {
+  margin: auto;
+  padding: 6rem;
 }
