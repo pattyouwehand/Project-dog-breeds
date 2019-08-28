@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Player from "./Player";
 import AddPlayer from "./AddPlayer"
+import { connect } from 'react-redux';
 
-export default class Scoreboard extends Component {
+class Scoreboard extends Component {
 
   state = {
     player: [
@@ -65,3 +66,11 @@ export default class Scoreboard extends Component {
     )
   }
 }
+
+const storePlayer = (player) => {
+  console.log("PLAYER in storePlayer", player)
+  return {type: 'STORE_PLAYER', payload: player}
+}
+const mapDispatchToProps = { storePlayer }
+
+export default connect(null, mapDispatchToProps)
