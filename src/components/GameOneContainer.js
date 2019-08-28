@@ -11,7 +11,6 @@ export default class GameOneContainer extends React.Component {
     .get('https://dog.ceo/api/breeds/image/random')
     .then(response => {
       console.log("RESPONSE", response)
-      this.setState({random: response.body})
     })
     .catch(console.error)
   }
