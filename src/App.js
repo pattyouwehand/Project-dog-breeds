@@ -5,6 +5,7 @@ import Doglist from './doglist'
 import { Route, Link } from 'react-router-dom'
 // import DogImages from './dogimages'
 import DogImagesContainer from './DogImagesContainer'
+import Scoreboard from './Components/Scoreboard';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <br />
         <Gif />
         <br />
+        <Scoreboard />
         <p> (Under Construction...) </p>
       </header>
       <main>
