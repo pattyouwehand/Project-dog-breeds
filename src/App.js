@@ -5,14 +5,11 @@ import Doglist from './doglist'
 import { Route, Link } from 'react-router-dom'
 // import DogImages from './dogimages'
 import DogImagesContainer from './DogImagesContainer'
-import GameOneList from './components/GameOneList'
 import GameOneContainer from './components/GameOneContainer';
-
 
 
 export default class App extends React.Component {
   
-
   render() {
     return (
       <div className="App">
