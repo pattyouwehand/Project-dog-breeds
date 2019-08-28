@@ -9,7 +9,7 @@ export default class AddPlayer extends Component {
     })
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault()
     console.log(`Submitting form with name ${this.state.name}`)
     this.props.addPlayer(this.state.name)
