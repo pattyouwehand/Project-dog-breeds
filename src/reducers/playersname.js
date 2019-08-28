@@ -3,7 +3,7 @@ const reducer = (state = [], action) => {
   switch (action.type) {
   case 'STORE_PLAYER': {
     console.log("Test Reducer Store Player")
-    return action.payload
+    return [...state, action.payload]
   }
   default:
     return state

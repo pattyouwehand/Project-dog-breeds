@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 class Scoreboard extends Component {
 
   state = {
-    player: [
+    players: [
       { name: '', score: 0, id: 0 }
     ]
   }
@@ -28,7 +28,8 @@ class Scoreboard extends Component {
     })
     console.log("NAME in Increment Store", name)
     console.log("NEW PLAYER in IncrementScore", newPlayer)
-    this.setState({ player: newPlayer })
+    this.props.storePlayer(newPlayer)
+    // this.setState({ player: newPlayer })
   }
 
   addPlayer = (name) => {
@@ -38,20 +39,26 @@ class Scoreboard extends Component {
       score: 0
     }
     console.log("PLAYER in addPlayer", player)
-    this.setState({
-      player: this.state.player.concat(player)
-    })
+    console.log("Name in addPlayer", player)
+    this.props.storePlayer(player)
+    // this.setState({
+    //   player: this.state.player.concat(player)
+    // })
   }
 
   render() {
+    //this.addPlayer
+    console.log('this.props.players test:', this.props.player)
+    console.log("this.state.player", this.state.player)
     return (
       <div className="scoreboard">
         <h3>Scoreboard:</h3>
         <AddPlayer addPlayer={this.addPlayer}></AddPlayer>
           {
-            [...this.state.player]
+            this.props.players
               .sort((a, b) => b.score - a.score)
-              .map(({ name, score, id }) => {
+              .map(({ name, score, id }) => 
+              {
                 return <Player
                   key={name}
                   name={name}
@@ -73,4 +80,11 @@ const storePlayer = (player) => {
 }
 const mapDispatchToProps = { storePlayer }
 
-export default connect(null, mapDispatchToProps)
+const mapStateToProps = (state) => {
+  console.log('state test:', state)
+  return {
+    players: state.playersname 
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Scoreboard)
