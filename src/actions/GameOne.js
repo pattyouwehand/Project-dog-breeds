@@ -13,8 +13,9 @@ export function getPicture(random){
 export function getRandomPicture(){
   return function (dispatch){
     request('https://dog.ceo/api/breeds/image/random')
-    .getHeaderNames(response => {
-      dispatch(getRandomPicture(response.body))
-    })
+      .then(response => {
+        console.log('response test:', response)
+        dispatch(getPicture(response.body))
+      })
   }
 }

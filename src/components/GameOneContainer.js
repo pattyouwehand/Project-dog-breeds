@@ -9,8 +9,7 @@ class GameOneContainer extends React.Component {
   state = {}
 
   componentDidMount(){
-    request('https://dog.ceo/api/breeds/image/random')
-    .then(res => this.props.getRandomPicture())
+    this.props.getRandomPicture()
   }
 
   render(){
@@ -25,4 +24,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(GameOneContainer)
+const mapDispatchToProps = { getRandomPicture }
+
+export default connect(mapStateToProps, mapDispatchToProps)(GameOneContainer)
