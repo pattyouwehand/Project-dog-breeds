@@ -4,6 +4,9 @@ export default class AddPlayer extends Component {
   state = { name: '' }
 
   handleChange = (event) => {
+    console.log("EVENT", event)
+    console.log("EVENT Target Name", event.target.name)
+    console.log("EVENT Target Value", event.target.value)
     this.setState({
       [event.target.name]: event.target.value
     })

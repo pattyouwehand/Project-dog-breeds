@@ -25,6 +25,8 @@ export default class Scoreboard extends Component {
       //no score
       return player
     })
+    console.log("NAME in Increment Store", name)
+    console.log("NEW PLAYER in IncrementScore", newPlayer)
     this.setState({ player: newPlayer })
   }
 
@@ -34,10 +36,12 @@ export default class Scoreboard extends Component {
       name,
       score: 0
     }
+    console.log("PLAYER in addPlayer", player)
     this.setState({
       player: this.state.player.concat(player)
     })
   }
+
   render() {
     return (
       <div className="scoreboard">
@@ -60,6 +64,4 @@ export default class Scoreboard extends Component {
       </div>
     )
   }
-
-
 }
