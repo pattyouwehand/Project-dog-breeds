@@ -11,26 +11,27 @@ class Scoreboard extends Component {
     ]
   }
 
-  incrementScore = (name) => {
-    console.log('INSIDE SCOREBOARD', name)
-    //calculate score
-    const newPlayer = this.state.player.map(player => {
-      if (player.name === name) {
-        //this person scored
-        return {
-          name: player.name,
-          score: player.score + 1,
-          id: player.id
-        }
-      }
-      //no score
-      return player
-    })
-    console.log("NAME in Increment Store", name)
-    console.log("NEW PLAYER in IncrementScore", newPlayer)
-    this.props.storePlayer(newPlayer)
-    // this.setState({ player: newPlayer })
-  }
+  // Currently no being used
+  // incrementScore = (name) => {
+  //   console.log('INSIDE SCOREBOARD', name)
+  //   //calculate score
+  //   const newPlayer = this.state.player.map(player => {
+  //     if (player.name === name) {
+  //       //this person scored
+  //       return {
+  //         name: player.name,
+  //         score: player.score + 1,
+  //         id: player.id
+  //       }
+  //     }
+  //     //no score
+  //     return player
+  //   })
+  //   console.log("NAME in Increment Store", name)
+  //   console.log("NEW PLAYER in IncrementScore", newPlayer)
+  //   this.props.storePlayer(newPlayer)
+  //   // this.setState({ player: newPlayer })
+  // }
 
   addPlayer = (name) => {
     const player = {
@@ -64,7 +65,7 @@ class Scoreboard extends Component {
                   name={name}
                   score={score}
                   id={id}
-                  incrementScore={this.incrementScore}
+                  // incrementScore={this.incrementScore}
                 />
               })
           }
