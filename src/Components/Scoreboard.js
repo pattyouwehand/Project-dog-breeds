@@ -13,7 +13,7 @@ export default class Scoreboard extends Component {
   incrementScore = (name) => {
     console.log('INSIDE SCOREBOARD', name)
     //calculate score
-    const newPlayer = this.state.players.map(player => {
+    const newPlayer = this.state.player.map(player => {
       if (player.name === name) {
         //this person scored
         return {
@@ -41,7 +41,7 @@ export default class Scoreboard extends Component {
   render() {
     return (
       <div className="scoreboard">
-        <h4>Scoreboard</h4>
+        <h3>Scoreboard:</h3>
         <AddPlayer addPlayer={this.addPlayer}></AddPlayer>
           {
             [...this.state.player]

@@ -35,11 +35,9 @@ function App() {
         {/* <h4> Enjoy the app. You can start by checking our breed list. Click in 'Dog List' for more information. </h4> */}
       </main>
       <aside>
+      {/* <p>Made with ❤ at Codaisseur by Lucas and Patty</p>  */}
       </aside>
       <footer>
-        <br />
-        <br />
-        <br />
         {/* <p>Made with ❤ at Codaisseur by Lucas and Patty</p> */}
       </footer>
     </div>

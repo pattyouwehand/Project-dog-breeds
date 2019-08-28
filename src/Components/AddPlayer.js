@@ -18,7 +18,7 @@ export default class AddPlayer extends Component {
   render() {
     return (
       <div className="add-player">
-        <p> Write your name to start playing:</p>
+        <p> Write down your name to start playing:</p>
         <form onSubmit={this.handleSubmit}>
           <label>
             Name:
