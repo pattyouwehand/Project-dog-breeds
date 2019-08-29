@@ -4,7 +4,7 @@ import Gametwo from './gametwo'
 import { connect } from 'react-redux'
 
 class Gametwopics extends Component {
-  state = { images: null }
+  state = { breed: null }
 
   componentDidMount() {
     
@@ -17,19 +17,12 @@ class Gametwopics extends Component {
       .catch(console.error)
   }
 
-  // addBreed = (breed) => {
-  //   this.props.storeBreed(breed)
-  // }
-
-  storeBreed = (breed) => {
-    console.log("PLAYER in storePlayer", breed)
-    return {type: 'STORE_BREED', payload: breed}
-  }
+  addBreed = (breed) => this.props.storeBreed(breed)
 
   updateImages(images) {
     console.log("TOTAL IMAGES", images.length)
     console.log("UPDATE IMAGES", images)
-    return this.props.storeImages(images);
+    this.props.storeImages(images);
   }
 
   handleChange = (event) => {
@@ -41,7 +34,7 @@ class Gametwopics extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     console.log(`Submitting form with breed ${this.state.breed}`)
-    // this.props.addBreed(this.state.name)
+    this.addBreed(this.state.breed)
   }
 
   render () {
@@ -54,12 +47,12 @@ class Gametwopics extends Component {
             Breed:
             <input
               type="text"
-              name="name"
+              name="breed"
               onChange={this.handleChange}
-              value={this.props.breed}
+              value={this.state.breed}
             />
           </label>
-          <input type="submit" value="Add" />
+          <input type="submit" value="Test" />
         </form>
       </main>
     )
@@ -67,10 +60,9 @@ class Gametwopics extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log("mapStateToProps")
-  console.log("mapStateToProps2", state)
   return {
-    images: state.gametwoimg
+    images: state.gametwoimg,
+    breed: state.breedgametwo
   }
 }
 
@@ -79,6 +71,11 @@ const storeImages = (images) => {
   return { type: 'STORE_GAME_IMAGES', payload: images }
 }
 
-const mapDispatchToProps = { storeImages }
+const storeBreed = (breed) => {
+  console.log("Breed in storePlayer", breed)
+  return {type: 'STORE_BREED', payload: breed}
+}
+
+const mapDispatchToProps = { storeImages, storeBreed }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Gametwopics)

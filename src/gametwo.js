@@ -17,7 +17,9 @@ export default function Gametwo(props) {
       {images && images.map(url => <img className="dog-breed-images" key={url} src={url} alt="Game Two Img" />)}
       {!images && 'Loading...'}
       <br />
-      <p> Let's practice our knowledge. </p>
+      <p> Let's practice our knowledge.</p>
+      <br />
+      <p><b> Tell us the second breed's name </b></p>
     </div>
   )
 }
