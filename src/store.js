@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware, compose } from 'redux'
-import reducer from './reducer'
+import reducer from './reducers/GameOne'
 import ReduxThunk from 'redux-thunk'
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f

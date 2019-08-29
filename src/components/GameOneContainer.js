@@ -1,5 +1,4 @@
 import React from 'react'
-import * as request from 'superagent';
 import GameOneList from './GameOneList'
 import {getRandomPicture} from '../actions/GameOne'
 import { connect } from 'react-redux';
@@ -14,7 +13,11 @@ class GameOneContainer extends React.Component {
 
   render(){
     if(!this.props.random) return "Loading.."
-    return <GameOneList random={this.props.random} />
+    return (
+      <div>
+        <GameOneList random={this.props.random} />
+      </div>
+    )
   }
 }
 
