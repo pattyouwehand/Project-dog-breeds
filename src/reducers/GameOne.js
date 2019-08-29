@@ -1,6 +1,9 @@
-import {GET_PICTURE, getPicture} from '../actions/GameOne'
+import {GET_PICTURE} from '../actions/GameOne'
 
-export default (state = {}, action) => {
+const initialState = {
+    payload:{}
+}
+export default (state = initialState, action) => {
     console.log('ACTION:', action, action.type, GET_PICTURE)
     switch(action.type){
     case GET_PICTURE:

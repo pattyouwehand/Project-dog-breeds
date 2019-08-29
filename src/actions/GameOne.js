@@ -10,12 +10,9 @@ export function getPicture(random){
 }
 
 export function getRandomPicture(){
-  console.log("hello")  
   return function (dispatch){
-    console.log("dispatch function")
     request('https://dog.ceo/api/breeds/image/random')
       .then(response => {
-        console.log("RESPONSE:", response)
         dispatch(getPicture(response.body))
       })
   }
