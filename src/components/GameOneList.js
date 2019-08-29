@@ -1,12 +1,12 @@
 import React from 'react'
-import GameOneContainer from './GameOneContainer'
-
-function handleSubmit(){
-  
-}
-
+// import GameOneContainer from './components/GameOneContainer'
 
 export default function GameOneList (props) {
+
+  function handleSubmit(event){
+    event.preventDefault()
+  }
+
   return(
 
     <div className="game-container">

@@ -5,7 +5,7 @@ import Doglist from './doglist'
 import { Route, Link } from 'react-router-dom'
 import DogImagesContainer from './DogImagesContainer'
 import GameOneContainer from './components/GameOneContainer';
-import Scoreboard from './Components/Scoreboard';
+import Scoreboard from './components/Scoreboard';
 import Gametwopics from './gametwopics';
 import Homepage from './homepage'
 
@@ -27,7 +27,7 @@ function App() {
         <br />
         <Link className="link-button" to="/"> Home </Link>
         <Link className="link-button" to="/dog-list"> Dog List </Link>
-        <Link className="link-button" to="/game-one"><button>Game One</button></Link>
+        <Link className="link-button" to="/game-one"> Game One </Link>
         <Link className="link-button" to="/game-two"> Game Two </Link>
         <Route path="/dog-list" component={Doglist} />
         <Route path="/dog-breeds/:breed" component={DogImagesContainer} />
