@@ -2,12 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -15,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 20px;
   color: white;
 }
 
@@ -25,4 +19,32 @@
 
 ul {
   list-style-type: none;
+}
+
+.link-button {
+display: inline;
+font-weight: bold;
+padding: 1rem;
+}
+
+.dog-breed-images {
+  max-width: 450px;
+  max-height: 600px;
+  text-align: center;
+  margin: auto;
+}
+
+.doglist {
+  font-size: 20px;
+}
+
+.link-button {
+  font-size: 28px;
+  padding: 2rem;
+  text-decoration: none;
+}
+
+footer {
+  margin: auto;
+  padding: 6rem;
 }
