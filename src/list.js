@@ -25,6 +25,9 @@ export default class List extends Component {
             <ul>{dogBreed.map(this.renderDogBreed)}</ul>
           }
         </ul>}
+        <footer>
+          <p>Made with ❤ at Codaisseur by Lucas and Patty</p>
+        </footer>
       </div>
     )
   }

@@ -15,6 +15,9 @@ export default class Homepage extends Component {
         </img>
         <br />
         <br />
+        <footer>
+          <p>Made with ❤ at Codaisseur by Lucas and Patty</p>
+        </footer>
       </div>
     )
   }

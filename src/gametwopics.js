@@ -7,7 +7,6 @@ class Gametwopics extends Component {
   state = { breed: null }
 
   componentDidMount() {
-    
     request
       .get(`https://dog.ceo/api/breeds/image/random/3`)
       .then(response => {
@@ -21,7 +20,7 @@ class Gametwopics extends Component {
 
   updateImages(images) {
     console.log("TOTAL IMAGES", images.length)
-    console.log("UPDATE IMAGES", images)
+    console.log("UPDATE IMAGES", images[1])
     this.props.storeImages(images);
   }
 
@@ -37,24 +36,29 @@ class Gametwopics extends Component {
     this.addBreed(this.state.breed)
   }
 
-  render () {
+  render() {
     console.log("RENDERING", this.props.images)
     return (
-      <main>
-      <Gametwo className="dog-breed-images" images={this.props.images} />
-      <form onSubmit={this.handleSubmit}>
-          <label>
-            Breed:
+      <div>
+        <main>
+          <Gametwo className="dog-breed-images" images={this.props.images} />
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              Breed:
             <input
-              type="text"
-              name="breed"
-              onChange={this.handleChange}
-              value={this.state.breed}
-            />
-          </label>
-          <input type="submit" value="Test" />
-        </form>
-      </main>
+                type="text"
+                name="breed"
+                onChange={this.handleChange}
+                value={this.state.breed}
+              />
+            </label>
+            <input type="submit" value="Test" />
+          </form>
+        </main>
+        <footer>
+          <p>Made with ❤ at Codaisseur by Lucas and Patty</p>
+        </footer>
+      </div>
     )
   }
 }
@@ -73,7 +77,7 @@ const storeImages = (images) => {
 
 const storeBreed = (breed) => {
   console.log("Breed in storePlayer", breed)
-  return {type: 'STORE_BREED', payload: breed}
+  return { type: 'STORE_BREED', payload: breed }
 }
 
 const mapDispatchToProps = { storeImages, storeBreed }
