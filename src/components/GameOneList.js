@@ -13,7 +13,7 @@ export default function GameOneList (props) {
       <h1>Test your knowledge</h1>
       <form onSubmit={handleSubmit}>
         <h3>Which dog breed is on this picture?</h3>
-        <img alt='randomPicture' src={props.random}/>
+        <img className="dog-breed-images" alt='randomPicture' src={props.random}/>
         <ul>
           <li>
             <input type="radio" name="dog" value="answer" />

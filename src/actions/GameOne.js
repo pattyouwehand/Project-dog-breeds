@@ -17,5 +17,3 @@ export function getRandomPicture(){
       })
   }
 }
-
-{/* ${encodeURIComponent(random)}*/}
