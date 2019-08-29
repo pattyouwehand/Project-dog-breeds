@@ -7,7 +7,6 @@ class DogImagesContainer extends Component {
   state = { images: null }
 
   componentDidMount() {
-
     const breed = this.props.match.params.breed
     request
       .get(`https://dog.ceo/api/breed/${encodeURIComponent(breed)}/images`)
