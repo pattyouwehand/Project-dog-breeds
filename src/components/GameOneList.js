@@ -22,6 +22,9 @@ export default function GameOneList (props) {
         </ul>
         <button type="submit">Make your choice</button>
       </form>
+      <footer>
+      <p>Made with ❤ at Codaisseur by Lucas and Patty</p>
+      </footer>
     </div>
   )
 }
