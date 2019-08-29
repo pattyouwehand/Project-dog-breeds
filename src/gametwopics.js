@@ -17,16 +17,51 @@ class Gametwopics extends Component {
       .catch(console.error)
   }
 
+  // addBreed = (breed) => {
+  //   this.props.storeBreed(breed)
+  // }
+
+  storeBreed = (breed) => {
+    console.log("PLAYER in storePlayer", breed)
+    return {type: 'STORE_BREED', payload: breed}
+  }
+
   updateImages(images) {
     console.log("TOTAL IMAGES", images.length)
     console.log("UPDATE IMAGES", images)
     return this.props.storeImages(images);
   }
 
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault()
+    console.log(`Submitting form with breed ${this.state.breed}`)
+    // this.props.addBreed(this.state.name)
+  }
+
   render () {
     console.log("RENDERING", this.props.images)
     return (
-      <main><Gametwo className="dog-breed-images" images={this.props.images} /></main>
+      <main>
+      <Gametwo className="dog-breed-images" images={this.props.images} />
+      <form onSubmit={this.handleSubmit}>
+          <label>
+            Breed:
+            <input
+              type="text"
+              name="name"
+              onChange={this.handleChange}
+              value={this.props.breed}
+            />
+          </label>
+          <input type="submit" value="Add" />
+        </form>
+      </main>
     )
   }
 }

@@ -6,16 +6,6 @@ export default function Gametwo(props) {
 
   console.log("IMAGES in Gametwo", images)
 
-  handleSubmit = (event) => {
-    event.preventDefault()
-  }
-
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
-
   return (
     <div>
       <br />
@@ -28,19 +18,6 @@ export default function Gametwo(props) {
       {!images && 'Loading...'}
       <br />
       <p> Let's practice our knowledge. </p>
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Breed:
-            <input
-            type="text"
-            name="name"
-            onChange={this.handleChange}
-            value={this.props.name}
-          />
-        </label>
-        <input type="submit" value="Add" />
-      </form>
     </div>
   )
-
 }
