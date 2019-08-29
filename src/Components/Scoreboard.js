@@ -11,7 +11,7 @@ class Scoreboard extends Component {
     ]
   }
 
-  // Currently no being used
+  // //Currently no being used
   // incrementScore = (name) => {
   //   console.log('INSIDE SCOREBOARD', name)
   //   //calculate score

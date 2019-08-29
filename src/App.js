@@ -6,6 +6,7 @@ import { Route, Link } from 'react-router-dom'
 // import DogImages from './dogimages'
 import DogImagesContainer from './DogImagesContainer'
 import Scoreboard from './Components/Scoreboard';
+import Gametwopics from './gametwopics';
 
 
 function App() {
@@ -27,9 +28,11 @@ function App() {
         {/* <Doglist /> */}
         <Link className="link-button" to="/"> Home </Link>
         <Link className="link-button" to="/dog-list"> Dog List </Link>
+        <Link className="link-button" to="/game-two"> Game Two </Link>
         <Route path="/dog-list" component={Doglist} />
         {/* <Route path="/dog-breeds/:breed" component={DogImages } /> */}
         <Route path="/dog-breeds/:breed" component={DogImagesContainer} />
+        <Route path="/game-two" component={Gametwopics} />
         <br />
         <br />
         {/* <h4> Enjoy the app. You can start by checking our breed list. Click in 'Dog List' for more information. </h4> */}
