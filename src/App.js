@@ -15,7 +15,7 @@ function App() {
       <header className="App-header">
         <title> Dog-Breeds App </title>
         <h1> Dog Breeds App </h1>
-        <p> Check our dog list with pictures! </p>
+        <p> Check the dog list with pictures! </p>
         <br />
         <Gif />
         <br />
@@ -24,10 +24,10 @@ function App() {
       <main>
         <br />
         <br />
-        <Link className="link-button" to="/"> Home </Link>
-        <Link className="link-button" to="/dog-list"> Dog List </Link>
-        <Link className="link-button" to="/game-one"> Game One </Link>
-        <Link className="link-button" to="/game-two"> Game Two </Link>
+        <Link className="link-button" to="/"> HOME </Link>
+        <Link className="link-button" to="/dog-list"> DOG LIST </Link>
+        <Link className="link-button" to="/game-one"> GAME ONE </Link>
+        <Link className="link-button" to="/game-two"> GAME TWO </Link>
         <Route path="/dog-list" component={Doglist} />
         <Route path="/dog-breeds/:breed" component={DogImagesContainer} />
         <Route path="/game-two" component={Gametwopics} />

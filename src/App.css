@@ -19,6 +19,7 @@
 
 ul {
   list-style-type: none;
+  margin: 0px;
 }
 
 .link-button {
@@ -36,6 +37,7 @@ padding: 1rem;
 
 .doglist {
   font-size: 20px;
+ 
 }
 
 .link-button {
@@ -57,3 +59,9 @@ footer {
   align-content: center
 }
 
+.list-style{
+  display: flexbox;
+  justify-content: center;
+  align-content: center;
+  margin: 0px;
+}
