@@ -49,10 +49,12 @@ class Gametwopics extends Component {
       const spliced = splitted.splice(4, 1)
       console.log("SPLICED", spliced);
 
-
+      const compareResult = () => {
       if (spliced === this.props.breed) {
-        return this.props.player.score =+ 1
-      }
+        console.log("COMPARISSON", this.props.breed)
+        return this.props.players.score =+ 1
+      }}
+      console.log("COMPARARESULT", compareResult)
 
       return (
         <div>
