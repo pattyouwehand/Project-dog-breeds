@@ -7,7 +7,6 @@ export default class Player extends Component {
   }
 
   render() {
-    console.log("Player Props", this.props)
     const { name, score, id } = this.props
     return (
       <ul className="players">
