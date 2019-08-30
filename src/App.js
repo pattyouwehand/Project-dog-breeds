@@ -20,7 +20,6 @@ function App() {
         <Gif />
         <br />
         <Scoreboard />
-        <p> (Under Construction...) </p>
       </header>
       <main>
         <br />
