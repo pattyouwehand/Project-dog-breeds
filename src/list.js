@@ -18,7 +18,7 @@ export default class List extends Component {
     return (
       <div className="dogs-list">
         <h1>Dogs List</h1>
-        {<ul>
+        {<ul className="list-style">
           {!dogBreed && 'Loading...'}
           {
             dogBreed &&
