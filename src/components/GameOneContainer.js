@@ -11,7 +11,8 @@ class GameOneContainer extends React.Component {
     this.props.getRandomPicture()
   }
 
-  render(){
+  render()
+  {console.log("THIS PROPS RANDOM:", this.props.random)
     if(!this.props.random) return "Loading.."
     return (
         <GameOneList random={this.props.random}/>
@@ -22,7 +23,7 @@ class GameOneContainer extends React.Component {
 const mapStateToProps = (state) => {
   console.log("state:", state)
   return {
-    random: state.GameOne.payload.message
+    random: state.GameOne.payload
   }
 }
 
