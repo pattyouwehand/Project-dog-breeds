@@ -42,11 +42,19 @@ class Gametwopics extends Component {
       console.log("RENDERING", this.props.images);
       const secondurlcoded = this.props.images[1];
       console.log("SECOND URL", secondurlcoded);
+      const thirdurlcoded = this.props.images[2]
+      const firsturlcoded = this.props.images[0]
+      const firsturl = encodeURIComponent(firsturlcoded)
       const secondurl = encodeURIComponent(secondurlcoded)
+      const thirdurl = encodeURIComponent(thirdurlcoded)
       console.log("second url decoded", secondurl)
       const splitted = secondurl.split('%2F')
+      const splitted2 = thirdurl.split('%2F')
+      const splitted0 = firsturl.split('%2F')
       console.log("SPLITTED", splitted)
       const spliced = splitted.splice(4, 1)
+      const spliced2 = splitted2.splice(4, 1)
+      const spliced0 = splitted0.splice(4, 1)
       console.log("SPLICED", spliced);
 
       const compareResult = () => {
@@ -60,6 +68,7 @@ class Gametwopics extends Component {
         <div>
           <main>
             <Gametwo className="dog-breed-images" images={this.props.images} />
+            <p> Tip: {spliced}, {spliced2} or {spliced0}</p>
             <form onSubmit={this.handleSubmit}>
               <label>
                 Breed:

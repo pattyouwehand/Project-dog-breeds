@@ -19,7 +19,7 @@ export default function Gametwo(props) {
       <br />
       <p> Let's practice our knowledge.</p>
       <br />
-      <p><b> Tell us the second breed's name </b></p>
+      <p><b> Write down the second picture's breed: </b></p>
     </div>
   )
 }
