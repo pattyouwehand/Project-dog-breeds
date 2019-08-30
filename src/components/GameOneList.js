@@ -19,17 +19,22 @@ export default class GameOneList extends React.Component {
     if(!answers) return "Loading.."
     const button = answers.map(answer =>(<button className="button-container" value={answer} onClick={this.handleEvent}> {answer}</button>))
 
-    return(
-
-      <div className="game-container">
-       <h1>Test your knowledge</h1>
-          <h3>Which dog you see on this picture?</h3>
-          <div className="image">
-            {image && <img className="gameOneImage" src={image} alt="Dog" />}
-          </div>
-    
-            {button}
-      </div>
-    )
-  }
+    <div className="game-container">
+      <h1>Test your knowledge</h1>
+      <form onSubmit={handleSubmit}>
+        <h3>Which dog breed is on this picture?</h3>
+        <img className="dog-breed-images" alt='randomPicture' src={props.random}/>
+        <ul>
+          <li>
+            <input type="radio" name="dog" value="answer" />
+            name
+          </li>
+        </ul>
+        <button type="submit">Make your choice</button>
+      </form>
+      <footer>
+      <p>Made with ❤ at Codaisseur by Lucas and Patty</p>
+      </footer>
+    </div>
+  )
 }

@@ -10,6 +10,7 @@ class Gametwopics extends Component {
     request
       .get(`https://dog.ceo/api/breeds/image/random/3`)
       .then(response => {
+        console.log("RESPONSE", response.body.message)
         this.updateImages(response.body.message)
       })
       .catch(console.error)
@@ -17,8 +18,11 @@ class Gametwopics extends Component {
 
   addBreed = (breed) => this.props.storeBreed(breed)
 
-  updateImages(images) {
-    this.props.storeImages(images);
+
+  updateImages = (images) => {
+    // console.log("TOTAL IMAGES", images.length)
+    // console.log("UPDATE IMAGES", images[1])
+    this.props.storeImages(images)
   }
 
   handleChange = (event) => {
@@ -29,14 +33,47 @@ class Gametwopics extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
+    console.log(`Submitting form with breed ${this.state.breed}`)
     this.addBreed(this.state.breed)
+    // this.compareResult(this.props.players)
+    // if (spliced === this.props.breed) {
+    //   return this.props.players.score++
+    // }
   }
 
   render() {
+
+    // console.log("RENDERING", this.props.images);
+    const secondurlcoded = this.props.images[1];
+    // console.log("SECOND URL", secondurlcoded);
+    const thirdurlcoded = this.props.images[2]
+    const firsturlcoded = this.props.images[0]
+    const firsturl = encodeURIComponent(firsturlcoded)
+    const secondurl = encodeURIComponent(secondurlcoded)
+    const thirdurl = encodeURIComponent(thirdurlcoded)
+    // console.log("second url decoded", secondurl)
+    const splitted = secondurl.split('%2F')
+    const splitted2 = thirdurl.split('%2F')
+    const splitted0 = firsturl.split('%2F')
+    // console.log("SPLITTED", splitted)
+    const spliced = splitted.splice(4, 1)
+    const spliced2 = splitted2.splice(4, 1)
+    const spliced0 = splitted0.splice(4, 1)
+    // console.log("SPLICED", spliced);
+
+    const compareResult = (players) => {
+      if (spliced === this.props.breed) {
+        // Create action which will update the score of the user, in redux
+        return increaseScore(players) 
+      }
+    }
+    console.log("COMPARARESULT", compareResult)
+
     return (
       <div>
         <main>
           <Gametwo className="dog-breed-images" images={this.props.images} />
+          <p> Tip: {spliced}, {spliced2} or {spliced0}</p>
           <form onSubmit={this.handleSubmit}>
             <label>
               Breed:
@@ -61,18 +98,25 @@ class Gametwopics extends Component {
 const mapStateToProps = (state) => {
   return {
     images: state.gametwoimg,
-    breed: state.breedgametwo
+    breed: state.breedgametwo,
+    players: state.playersname
   }
 }
 
 const storeImages = (images) => {
+  // console.log("storeImages", images)
   return { type: 'STORE_GAME_IMAGES', payload: images }
 }
 
 const storeBreed = (breed) => {
+  // console.log("Breed in storePlayer", breed)
   return { type: 'STORE_BREED', payload: breed }
 }
 
-const mapDispatchToProps = { storeImages, storeBreed }
+const increaseScore = (players) => {
+  return { type: 'INCREASE_RESULT', payload: this.props.players.score++}
+}
+
+const mapDispatchToProps = { storeImages, storeBreed, increaseScore }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Gametwopics)

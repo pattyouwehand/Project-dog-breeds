@@ -15,7 +15,7 @@ class Scoreboard extends Component {
   // incrementScore = (name) => {
   //   console.log('INSIDE SCOREBOARD', name)
   //   //calculate score
-  //   const newPlayer = this.state.player.map(player => {
+  //   const newPlayer = this.props.player.map(player => {
   //     if (player.name === name) {
   //       //this person scored
   //       return {
