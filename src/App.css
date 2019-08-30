@@ -48,3 +48,12 @@ footer {
   margin: auto;
   padding: 6rem;
 }
+
+
+.gameOneImage{
+  height: 300px;
+  display: flexbox;
+  justify-content: center;
+  align-content: center
+}
+

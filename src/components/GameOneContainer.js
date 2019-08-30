@@ -11,18 +11,18 @@ class GameOneContainer extends React.Component {
     this.props.getRandomPicture()
   }
 
-  render(){
+  render()
+  {
     if(!this.props.random) return "Loading.."
     return (
-        <GameOneList random={this.props.random}/>
+        <GameOneList random={this.props.random} reloadPage={this.props.getRandomPicture}/>
     )
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log("state:", state)
   return {
-    random: state.GameOne.payload.message
+    random: state.GameOne.payload
   }
 }
 

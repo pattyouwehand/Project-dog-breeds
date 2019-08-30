@@ -4,20 +4,13 @@ export default class AddPlayer extends Component {
   state = { name: '' }
 
   handleChange = (event) => {
-    console.log("EVENT", event)
-    console.log("EVENT Target Name", event.target.name)
-    console.log("EVENT Target Value", event.target.value)
     this.setState({
       [event.target.name]: event.target.value
     })
   }
 
   handleSubmit = (event) => {
-    console.log("handleSubmit", this.props.player)
-    console.log("handleSubmit event", event)
-    console.log("Handle Submit",this.state.player)
     event.preventDefault()
-    console.log(`Submitting form with name ${this.state.name}`)
     this.props.addPlayer(this.state.name)
   }
 

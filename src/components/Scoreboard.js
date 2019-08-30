@@ -39,8 +39,6 @@ class Scoreboard extends Component {
       name,
       score: 0
     }
-    console.log("PLAYER in addPlayer", player)
-    console.log("Name in addPlayer", player)
     this.props.storePlayer(player)
     // this.setState({
     //   player: this.state.player.concat(player)
@@ -49,8 +47,6 @@ class Scoreboard extends Component {
 
   render() {
     //this.addPlayer
-    console.log('this.props.players test:', this.props.player)
-    console.log("this.state.player", this.state.player)
     return (
       <div className="scoreboard">
         <h3>Scoreboard:</h3>
@@ -76,13 +72,11 @@ class Scoreboard extends Component {
 }
 
 const storePlayer = (player) => {
-  console.log("PLAYER in storePlayer", player)
   return {type: 'STORE_PLAYER', payload: player}
 }
 const mapDispatchToProps = { storePlayer }
 
 const mapStateToProps = (state) => {
-  console.log('state test:', state)
   return {
     players: state.playersname 
   }

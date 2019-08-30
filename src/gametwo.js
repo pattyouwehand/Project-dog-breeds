@@ -4,7 +4,6 @@ export default function Gametwo(props) {
 
   const { images, breeds } = props;
 
-  console.log("IMAGES in Gametwo", images)
 
   return (
     <div>
