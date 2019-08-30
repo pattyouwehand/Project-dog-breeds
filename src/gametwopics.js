@@ -32,10 +32,10 @@ class Gametwopics extends Component {
   }
 
   handleSubmit = (event) => {
-    event.preventDefault()
+    // event.preventDefault()
     console.log(`Submitting form with breed ${this.state.breed}`)
     this.addBreed(this.state.breed)
-    alert('if the first tip was your option, then it is the right one. Refresh the page and try again!')
+    alert('if the first tip was your option, it is the right one. Now try it again!')
     // this.compareResult(this.props.players)
     // if (spliced === this.props.breed) {
     //   return this.props.players.score++
