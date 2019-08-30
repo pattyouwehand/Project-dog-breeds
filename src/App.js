@@ -12,6 +12,7 @@ import Homepage from './homepage'
 function App() {
   return (
     <div className="App">
+
       <header className="App-header">
         <title> Dog-Breeds App </title>
         <h1> Dog Breeds App </h1>
@@ -22,6 +23,7 @@ function App() {
         <Scoreboard />
         <br />
       </header>
+
       <main>
         <br />
         <br />
@@ -37,6 +39,7 @@ function App() {
         <br />
         <br />
       </main>
+      
     </div>
     );
   };
