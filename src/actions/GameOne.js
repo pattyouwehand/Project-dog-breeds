@@ -30,7 +30,7 @@ export function getRandomPicture(){
     request('https://dog.ceo/api/breeds/list/all')
       .then(response => {
         const breeds = Object.keys(response.body.message)
-        // dispatch(setBreeds(breeds))
+        //dispatch(setBreeds(breeds))
   
         const shuffled = shuffle(breeds)
         const answers = shuffled.slice(0, 3)
